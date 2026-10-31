@@ -1,0 +1,9 @@
+# Informações locais e segredos
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+.vscode/
+*.log
+__pycache__/

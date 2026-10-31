@@ -1,0 +1,17 @@
+name: Verify basic structure
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check essential files
+        run: |
+          test -f README.md
+          test -f index.html
+          test -f assets/css/style.css
+          test -f assets/js/script.js
+          test -f docs/engenharia/02-requisitos.md
+          test -f docs/web-design/03-design-system.md
